@@ -68,7 +68,7 @@ struct DetailsPage: View {
                 .cornerRadius(4)
             }
             
-            
+            NavigationLink("Submit", destination: Text("Hello"))
         }
     }
 }

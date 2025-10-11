@@ -69,7 +69,7 @@ struct signup:View{
                 }
             }
             .navigationDestination(isPresented: $navigate) {
-                            newpage()
+                            DetailsPage()
                         }
         }
         

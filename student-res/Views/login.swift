@@ -57,7 +57,7 @@ struct login: View {
                 }
             }
             .navigationDestination(isPresented:$navigate){
-                newpage()
+                questionpapers()
             }
             
         }

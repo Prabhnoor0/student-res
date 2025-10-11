@@ -33,7 +33,7 @@ struct homepage: View {
                 }
                 .navigationDestination(isPresented: $navigate) {
                     if Auth.auth().currentUser != nil {
-                        newpage()
+                        questionpapers()
                     } else {
                         nextpage()
                     }
