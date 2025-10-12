@@ -15,5 +15,5 @@ struct questionpapers: View {
 }
 
 #Preview {
-    newpage()
+    questionpapers()
 }
