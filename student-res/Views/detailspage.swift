@@ -13,14 +13,14 @@ final class DetailsPageViewModel: ObservableObject {
     @Published var semselection: String?
     @Published var branchselection: String?
        let semesters = [
-           "Semester 1",
-           "Semester 2",
-           "Semester 3",
-           "Semester 4",
-           "Semester 5",
-           "Semester 6",
-           "Semester 7",
-           "Semester 8"
+           "1",
+           "2",
+           "3",
+           "4",
+           "5",
+           "6",
+           "7",
+           "8"
        ]
     let branches = [
         "CS",

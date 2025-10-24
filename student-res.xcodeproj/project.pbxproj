@@ -38,33 +38,9 @@
 		7FFD717D2E9A1684006E2476 /* student-resUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "student-resUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		7F15C8112EA4D3760033C0BD /* Exceptions for "student-res" folder in "student-res" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Firebase/upload.py,
-			);
-			target = 7FFD71622E9A1682006E2476 /* student-res */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		7F15C8122EA4D3760033C0BD /* Exceptions for "student-res" folder in "Compile Sources" phase from "student-res" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = 7FFD715F2E9A1682006E2476 /* Sources */;
-			membershipExceptions = (
-				Firebase/upload.py,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7FFD71652E9A1682006E2476 /* student-res */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				7F15C8112EA4D3760033C0BD /* Exceptions for "student-res" folder in "student-res" target */,
-				7F15C8122EA4D3760033C0BD /* Exceptions for "student-res" folder in "Compile Sources" phase from "student-res" target */,
-			);
 			path = "student-res";
 			sourceTree = "<group>";
 		};

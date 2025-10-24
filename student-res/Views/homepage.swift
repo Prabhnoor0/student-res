@@ -11,6 +11,7 @@ import FirebaseAuth
 
 struct homepage: View {
     @State var navigate:Bool = false
+    @State var sem : String = ""
     var body: some View {
         NavigationStack{
                 VStack{
@@ -32,14 +33,18 @@ struct homepage: View {
                     navigate=true
                 }
                 .navigationDestination(isPresented: $navigate) {
-                    if Auth.auth().currentUser != nil {
-                        questionpapers()
-                    } else {
+                    if sem == ""{
                         nextpage()
+                    } else {
+                        questionpapers()
                     }
                     
                 }
+                .onAppear {
+                    UserService.shared.getsemester{ sem = $0 ?? "" }
+                }
             }
+        
     }
 }
 
