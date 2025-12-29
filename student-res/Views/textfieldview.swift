@@ -11,21 +11,67 @@ import SwiftUI
 struct textfieldview: View {
     @Binding var data2: String
     var data: String
+    @FocusState private var isFocused: Bool
+    
     var body: some View {
-        TextField(data, text:$data2)
-            .frame(width:300, height:50)
-            .background(Color.gray.opacity(0.2))
-            .cornerRadius(10)
+        TextField(data, text: $data2)
+            .focused($isFocused)
+            .textInputAutocapitalization(.never)
+            .autocorrectionDisabled()
+            .padding(.horizontal, 16)
+            .padding(.vertical, 14)
+            .frame(maxWidth: .infinity)
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(Color(.systemGray6))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(isFocused ? Color.blue : Color.clear, lineWidth: 2)
+                    )
+            )
+            .animation(.easeInOut(duration: 0.2), value: isFocused)
     }
 }
+
 struct securefieldview: View {
     @Binding var data2: String
     var data: String
+    @FocusState private var isFocused: Bool
+    @State private var showPassword = false
+    
     var body: some View {
-        SecureField(data, text:$data2)
-            .frame(width:300, height:50)
-            .background(Color.gray.opacity(0.2))
-            .cornerRadius(10)
+        HStack {
+            if showPassword {
+                TextField(data, text: $data2)
+                    .focused($isFocused)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
+            } else {
+                SecureField(data, text: $data2)
+                    .focused($isFocused)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
+            }
+            
+            Button(action: {
+                showPassword.toggle()
+            }) {
+                Image(systemName: showPassword ? "eye.slash.fill" : "eye.fill")
+                    .foregroundColor(.gray)
+            }
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 14)
+        .frame(maxWidth: .infinity)
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(Color(.systemGray6))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(isFocused ? Color.blue : Color.clear, lineWidth: 2)
+                )
+        )
+        .animation(.easeInOut(duration: 0.2), value: isFocused)
     }
 }
 

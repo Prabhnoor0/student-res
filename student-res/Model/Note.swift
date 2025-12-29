@@ -26,6 +26,6 @@ struct NoteSubmission: Identifiable, Codable {
     var subject: String?
     var uploadedBy: String
     var uploadedDate: Date
-    var status: String // "pending", "approved", "rejected"
+    var status: String 
 }
 
