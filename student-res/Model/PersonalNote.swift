@@ -5,14 +5,6 @@
 //  Created by Prabhnoor Kaur on 29/12/25.
 //
 
-
-//
-//  PersonalNoteModel.swift
-//  student-res
-//
-//  Created by Prabhnoor Kaur
-//
-
 import Foundation
 
 struct PersonalNote: Identifiable, Codable {

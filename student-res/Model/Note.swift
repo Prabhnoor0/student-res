@@ -5,14 +5,6 @@
 //  Created by Prabhnoor Kaur on 29/12/25.
 //
 
-
-//
-//  NotesModel.swift
-//  student-res
-//
-//  Created by Prabhnoor Kaur
-//
-
 import Foundation
 
 struct Note: Identifiable, Codable {
